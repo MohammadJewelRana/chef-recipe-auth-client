@@ -53,7 +53,9 @@ const ViewRecipe = () => {
 
             <div className='container  '>
                 <h1 className='text-center mt-4'>Recipe made by  <span className='text-danger'>{name}</span> </h1>
-                {
+              
+              <div className=' '>
+              {
                     recipes.map(recipe => <RecipeCard
 
                         recipe={recipe}
@@ -61,6 +63,8 @@ const ViewRecipe = () => {
                     ></RecipeCard>)
 
                 }
+              </div>
+ 
             </div>
 
 

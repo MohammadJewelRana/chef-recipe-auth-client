@@ -20,12 +20,12 @@ const RecipeCard = ({ recipe }) => {
 
 
     return (
-        <div>
+        <div className='  '>
 
             <Row xs={1} md={2}
-                lg={3} className="g-4 my-5">
+                lg={3} className="g-4 my-5  " >
 
-                <Col  >
+                <Col  className=' '>
                     <Card>
 
                         <LazyLoad height={200}>
