@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import { Button, Card, Col, Image, Row } from 'react-bootstrap';
 import first from '../assets/react.svg'
 import RecipeCard from './RecipeCard';
+import LazyLoad from 'react-lazyload';
 
 
 
@@ -30,6 +31,7 @@ const ViewRecipe = () => {
                             {description}
                         </Card.Text>
 
+
                         <Card.Subtitle className="mb-2 text-muted">
                             <p>Experience: {experience}</p>
                             <p>No. of Recipe:{no_of_recipe}</p>
@@ -40,7 +42,9 @@ const ViewRecipe = () => {
                     </Card.Body>
                 </Card>
                 <div className='p-4 '>
+                    <LazyLoad height={200}>
                     <Image className="d-block w-100 h-100  roundedCircle " src={pic} alt="" roundedCircle />
+                    </LazyLoad>
                 </div>
             </section>
 

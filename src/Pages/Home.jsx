@@ -6,6 +6,7 @@ import ChefDetails from './ChefDetails';
 import Caresoul from './Caresoul';
 import Banner from './Banner';
 import Featured from './Featured';
+import ContactUs from './ContactUs';
 
 
 const Home = () => {
@@ -55,6 +56,7 @@ const Home = () => {
 
 
             {/* Contact us */}
+            <ContactUs></ContactUs>
 
             {/* Contact us */}
 

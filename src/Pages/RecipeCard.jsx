@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Button, Card, Col, Image, Row } from 'react-bootstrap';
 import { FaRegStar, FaStar } from 'react-icons/fa';
+import LazyLoad from 'react-lazyload';
 import Rating from 'react-rating';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -26,11 +27,15 @@ const RecipeCard = ({ recipe }) => {
 
                 <Col  >
                     <Card>
-                        <img
-                            className="d-block w-100   object-fit-cover border rounded img-fluid"
-                            src={pic}
-                            alt=""
-                        />
+
+                        <LazyLoad height={200}>
+                            <img
+                                className="d-block w-100   object-fit-cover border rounded img-fluid"
+                                src={pic}
+                                alt=""
+                            />
+                        </LazyLoad>
+
                         <Card.Body>
                             <Card.Title className='fw-bold fs-2'> {name}</Card.Title>
                             <Card.Text>
@@ -48,7 +53,7 @@ const RecipeCard = ({ recipe }) => {
                                 <hr />
                                 <div className='d-flex justify-content-between'>
                                     <Button onClick={handleFavorite} variant="danger" disabled={favorite} > Favorite</Button>
-                                    <p className='mt-1 '>Ratings : 
+                                    <p className='mt-1 '>Ratings :
 
                                         <Rating
                                             placeholderRating={rating}
